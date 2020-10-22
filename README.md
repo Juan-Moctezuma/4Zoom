@@ -10,6 +10,12 @@ a chat message board.
 ### Link
 Heroku: https://four-zoom-by-juan.herokuapp.com
 
+### How does it work?
+Open the app, copy/paste the URL, and send it to another user!
+The app generates a chat room id number whenever the link opens 
+on a new tab.
+#### For example: https://four-zoom-by-juan.herokuapp.com/85ebaaa5-64de-4ebc-aaad-d6f2cb9**5e
+
 ### Does the code require a local web server to run?
 Yes.
 
