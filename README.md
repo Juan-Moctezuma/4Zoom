@@ -14,6 +14,7 @@ Heroku: https://four-zoom-by-juan.herokuapp.com
 Yes.
 
 ### Directory Tree
+<img src="Image/Directory_Zoom_Clone.png" width="50%">
 
 ### Technologies
 1. HTML5
