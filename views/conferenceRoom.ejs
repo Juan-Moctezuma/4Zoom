@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Zoom - Zoom's Clone for four!</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://kit.fontawesome.com/b4fd7ce315.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+</head>
+<body>
+    <!-- MAIN SECTION DIVIDES IN:
+            * LEFT (FOR VIDEO & CONTROL BUTTONS)
+            * RIGHT (FOR CHAT BOARD)
+    -->
+    <div class="main">
+        <div class="main_left">
+            <div id="videos">
+                <div id="video-grid">
+                    <!-- EACH VIDEO FRAME WILL SHOW UP AS USER CONNECTS; 
+                        FRAME DISAPPEARS AS USER DISCONNECTS
+                    -->
+                </div>
+            </div>
+            <div class="ctrls">
+                <div class="ctrls_block">
+                    <div onclick="muteUnmute()" class="main_ctrls_btn mute_btn">
+                        <i class="fas fa-microphone-alt"></i>
+                        <span>MUTE</span>
+                    </div>
+                    <div onclick="playStop()" class="main_ctrls_btn video_btn">
+                        <i class="fas fa-video"></i>
+                        <span>STOP VIDEO</span>
+                    </div>
+                    <div onclick="hideUnhide()" class="main_ctrls_btn chat_btn">
+                        <i class="fas fa-comment" id="chat_icon"></i>
+                        <span id="chat">HIDE CHAT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_right" id="right_section">
+            <div class="main_header">
+                <h3>4ZOOM CHAT</h3>
+            </div>
+            <div class="chat_window" id="chat_window">
+                <ul class="messages">
+                    <!-- USERS' MESSAGES ARE POSTED HERE IN REAL-TIME
+                    -->
+                </ul>
+            </div>
+            <div class="message_container">
+                <input id="chat_message" type="text" placeholder="Type Message here...">
+                <button id="send"><i class="fas fa-share"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
