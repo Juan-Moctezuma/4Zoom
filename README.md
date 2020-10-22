@@ -32,7 +32,7 @@ Yes.
 5. Node.js (Server-side)
 6. NPM Modules:
    * Ejs
-   * Express / Express-Session
+   * Express
    * Peer
    * Socket.io
    * UUID
